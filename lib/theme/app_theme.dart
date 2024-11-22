@@ -18,6 +18,12 @@ class AppTheme {
 
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(foregroundColor: Colors.green),
+        ),
+        //FloatingActionButtons
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Colors.blue,
+          elevation: 5,
+          foregroundColor: Colors.black
         )
   );
 }
