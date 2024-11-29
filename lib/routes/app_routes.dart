@@ -35,12 +35,18 @@ class AppRoutes {
       name: 'Avatar', 
       screen: const AvatarScreen()
       ),
-      MenuOption(
-        route: 'animated', 
-        icon: Icons.image, 
-        name: 'Animated', 
-        screen: const AnimatedScreen()
-        )
+    MenuOption(
+      route: 'animated', 
+      icon: Icons.image, 
+      name: 'Animated', 
+      screen: const AnimatedScreen()
+    ),
+    MenuOption(
+      route: 'inputs', 
+      icon: Icons.input_rounded, 
+      name: 'Inputs', 
+      screen: const InputScreen()
+    )
   ];
   static const initialRoute = 'home';
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
