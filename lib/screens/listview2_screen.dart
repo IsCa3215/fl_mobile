@@ -4,7 +4,7 @@ class Listview2Screen extends StatelessWidget {
 
   final options = const['Targaryen', 'Stark', 'Lannister', 'Baratheon'];
    
-  const Listview2Screen({Key? key}) : super(key: key);
+  const Listview2Screen({super.key});
   
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class Listview2Screen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
-              trailing: Icon( Icons.arrow_forward_ios_outlined),
+              trailing: const Icon( Icons.arrow_forward_ios_outlined),
               title: Text(options[index]),
               onTap: () {
                 final casa = options[index];

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fl_components/widgets/widgets.dart';
 class AppTheme {
   //primaryColor: Colors.red,
   static const Color primary = Colors.deepOrange;
@@ -24,6 +23,14 @@ class AppTheme {
           backgroundColor: Colors.blue,
           elevation: 5,
           foregroundColor: Colors.black
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.green,
+            foregroundColor: Colors.white,
+            shape: const StadiumBorder(),
+            elevation: 5
+          )
         )
   );
 }

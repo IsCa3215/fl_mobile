@@ -1,4 +1,3 @@
-import 'package:fl_components/main.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardTipo1 extends StatelessWidget {

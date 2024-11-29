@@ -4,7 +4,7 @@ class Listview1Screen extends StatelessWidget {
 
   final options = const['Targaryen', 'Stark', 'Lannister', 'Baratheon'];
    
-  const Listview1Screen({Key? key}) : super(key: key);
+  const Listview1Screen({super.key});
   
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,10 @@ class Listview1Screen extends StatelessWidget {
         children: [
           ...options.map((e) => 
             ListTile(
-              trailing: Icon( Icons.arrow_forward_ios_outlined),
+              trailing: const Icon( Icons.arrow_forward_ios_outlined),
               title: Text(e),
             ),
-          ).toList()
+          )
 
         ],
       )

@@ -28,7 +28,19 @@ class AppRoutes {
         route: 'card',
         icon: Icons.card_giftcard,
         name: 'Card',
-        screen: const CardScreen())
+        screen: const CardScreen()),
+    MenuOption(
+      route: 'avatar', 
+      icon: Icons.person, 
+      name: 'Avatar', 
+      screen: const AvatarScreen()
+      ),
+      MenuOption(
+        route: 'animated', 
+        icon: Icons.image, 
+        name: 'Animated', 
+        screen: const AnimatedScreen()
+        )
   ];
   static const initialRoute = 'home';
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
