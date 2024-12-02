@@ -7,11 +7,11 @@ class CustomTextFormField extends StatelessWidget {
     final String? helperText;
     final IconData? icono;
     final TextInputType? keyboardAction;
-    final String? formProperty;
+    final String formProperty;
     final Map<String, String> formValues;
 
   const CustomTextFormField({
-    super.key, this.hintText, this.labelText, this.helperText, this.icono, this.keyboardAction, this.formProperty, required this.formValues,
+    super.key, this.hintText, this.labelText, this.helperText, this.icono, this.keyboardAction, required this.formProperty, required this.formValues,
   });
 
   @override
@@ -21,8 +21,11 @@ class CustomTextFormField extends StatelessWidget {
       //initialValue: 'Cabalo',
       textCapitalization: TextCapitalization.words,
       keyboardType: keyboardAction,
-      onChanged: (value) =>
-        formValues[formProperty] = value,
+      onChanged: (value) {
+        formValues[formProperty] = value;
+        print('valores del formValue: ${formValues.toString()}');
+      
+      },
       validator: (value) {
         if (value!.length < 3) {
           return 'Minimo 3 caracteres';

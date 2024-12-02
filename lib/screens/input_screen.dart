@@ -42,30 +42,57 @@ class InputScreen extends StatelessWidget {
                   labelText: "alooooooo2",
                   hintText: "xd2",
                   icono: Icons.person_3_rounded,
-                  formProperty: 'apelidos',
+                  formProperty: 'apellidos',
                   formValues: formValues
               ),
 
               const SizedBox(height: 30),
-              const CustomTextFormField(
+              CustomTextFormField(
                   helperText: "Aloo3",
                   labelText: "alooooooo3",
                   hintText: "xd3",
-                  icono: Icons.person_3_rounded),
+                  icono: Icons.person_3_rounded,
+                  formProperty: 'apellidos2',
+                  formValues: formValues
+                  ),
               const SizedBox(height: 30),
-              const CustomTextFormField(
+              CustomTextFormField(
                 helperText: "email",
                 labelText: "email",
                 hintText: "email",
                 icono: Icons.email,
                 keyboardAction: TextInputType.emailAddress,
+                formProperty: 'apellidos3',
+                formValues: formValues
               ),
               const SizedBox(height: 30),
-              const CustomTextFormField(
+              DropdownButtonFormField(
+                items: const [
+                  DropdownMenuItem(value: 'usuario',child: Text('Usuaio'),),
+                  DropdownMenuItem(value: 'editor',child: Text('Editor'),),
+                  DropdownMenuItem(value: 'programador',child: Text('Programador'),),
+                  DropdownMenuItem(value: 'administrador',child: Text('Adminitrador'),),
+                ],
+                onChanged: ((value){
+                  print(value);
+                  formValues['role'] = value ?? 'usuario';
+                }),
+              ),
+              const SizedBox(height: 30),
+              Checkbox(value: true, onChanged: (value){
+                
+              }),
+
+              const SizedBox(height: 30),
+              CustomTextFormField(
                   helperText: "Aloo5",
                   labelText: "alooooooo5",
                   hintText: "xd5",
-                  icono: Icons.person_3_rounded),
+                  icono: Icons.person_3_rounded,
+                  formProperty: 'role',
+                  formValues: formValues
+                  ),
+                  
               const SizedBox(height: 30),
               ElevatedButton(
                   onPressed: () {
